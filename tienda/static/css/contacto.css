@@ -1,0 +1,407 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*::after,
+*::before,
+*{ 
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
+
+body{
+    font-family: 'Comic Sans MS', Times, serif !important;
+    background-color: #fff !important;
+    display: inline; 
+    margin: 0 auto !important;
+    max-width: 1200px !important;
+    font-family: 'Lato';
+    color: #e07faf;
+    background-image: url("fondo3.jpg");  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+  
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 20px !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+}
+
+.h1,h1{
+   
+    border-bottom: 3px solid rgb(249, 245, 245); 
+    font-size: 35px !important;
+    line-height: 10vh !important;
+    color: #FFFFFF !important;
+    background-color: #dac4c9 !important;
+    padding: 25px !important;
+    
+}
+
+.h2,h2{
+    padding: 2% !important;
+}
+
+
+h3{
+    color: #fff !important;
+}
+
+.h5,h5{
+    color: #000;
+}
+
+
+.h6,h6{
+    align-items: center !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    color: #fff !important;
+}
+
+.navbar-item{
+    align-items: center !important;
+    font-size: 18px;
+    display: flex;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 2px;
+    margin-top: 25px;
+    color: #fff !important;
+  
+   
+}
+
+.navbar{
+    border: 3px solid #FFFFFF;
+    text-shadow: 1px 1px #e956b8 !important;
+}
+
+.content-carrito-icon{
+    width: 80px;
+    height: 80px;
+    ALIGN-CONTENT: space-evenly;
+}
+
+.button {
+    display: inline-block;
+    font-size: 10px !important;
+    margin: 18px !important;
+    color: #fff !important;
+    background-color: #e07faf !important;
+    border: 2px solid #fff !important;
+    text-decoration: none !important;
+    padding: 15px !important;
+    border-radius: 25px !important; 
+    cursor: pointer !important;
+    transition: background-color 0.3s ease ;
+    
+}
+
+.button:hover {
+    background-color: #ea97c3 !important; 
+}
+
+.modal-header{
+    background-color: #e0d64c;
+    color: #FFFFFF;
+}
+
+.modal-body{
+    background-color: #e0d64c;
+    color: #FFFFFF;
+}
+
+.modal-footer{
+    background-color: #e0d64c !important;
+}
+
+.modal-title {
+    background-color:#e0d64c !important ;
+    border-bottom: 1px solid #d1bcc0;
+}
+
+.btn{
+    --bs-btn-hover-border-color: #fff !important
+}
+
+
+
+
+.navbar{
+    border: 1px solid #FFFFFF;
+}
+
+.card-text{
+   
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    padding: 5px !important;
+    
+
+}
+
+.card-title{
+    color: #fff !important;
+    
+    line-height: 2 !important;
+    padding: 5px !important;
+}
+
+figure {
+    margin: 0 0 0rem !important;
+}
+
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2px;
+    margin: 8px;
+
+}
+
+.card figure{
+    
+    overflow: hidden;
+
+}
+
+.card img{
+    transition: all .5s;
+    
+    
+}
+
+.card:hover{
+    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+}
+
+.card:hover img{
+    
+    transform: scale(1.2);
+}
+
+.card button{
+  
+    border-radius: 0%  !important;
+    background: none !important;
+    background-color: #000 !important;
+    color: #FFFFFF !important;
+    padding: 15px 10px !important;
+    cursor: pointer !important;
+    height: 50px !important;
+    margin: 20px !important;
+    width: 340px !important;
+
+}
+
+.btn-primary{
+    --bs-btn-border-color: #000 !important;
+    --bs-btn-hover-border-color: #fff !important;
+  
+}
+
+.text-center{
+    padding: 15px;
+    font-weight: 600 !important;
+}
+
+
+
+.button1{
+    font-size: 15px !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    background-color: #e07faf !important; 
+    padding: 10px 15px !important; 
+    border-radius: 25px !important; 
+    border: 2px solid #fff !important; 
+    cursor: pointer !important; 
+    transition: background-color 0.3s ease !important; 
+    align-items: center !important;
+    text-align: center !important;
+    margin: 8px !important;
+    display: inline-flex; 
+    text-decoration: none !important; 
+}
+
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #ffff !important;
+    padding: 25px !important;
+    background-color: #ea97c3;
+    text-shadow: 1px 1px #e956b8 !important;
+    gap: 10px !important;
+    border-radius: 25px !important; 
+
+}
+
+
+
+
+.row2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-check-input{
+    align-self: center;
+    
+}
+
+
+
+
+.row {
+    --bs-gutter-x: none !important;
+
+}
+
+.btn-primary{
+    
+    
+    background-color: #000 !important;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5%;
+    border-top: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: #e0d64c;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5%;
+    border-top: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: #d9aeb8;
+
+}
+
+.campo{ 
+    display: flex ;
+    padding: 20px 50px;
+    width: 45vh;
+    align-items: center;
+    height: 8vh;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    border: 1px solid #FFFFFF;
+    outline: none;
+    color: #000;
+
+}
+
+.campo::placeholder{
+    color:#dcd4d4;
+  
+}
+
+.btn-2{
+    display: inline-block;
+    padding: 13px 45px;
+    font-size: 18px;
+    background-color: #c18691;
+    color: #FFFFFF;
+    border-radius: 25px;
+    border: 0;
+    font-family: 'Bebas Neve', cursive;
+    cursor: pointer;
+    
+}
+
+.btn-2:hover{
+    background-color: #f6e1e6;
+}
+
+.error{
+   
+    color: red;
+   
+}
+
+
+.footer {
+    border-top: 2px solid #E8E8E8;
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ecb5d4;
+    padding: 20px !important;
+    margin-top: 40vh;
+    background-image: url("fondohijoshomerooooo.jpg");  
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+   
+}
+    
+.footer-copy{
+    padding: 25px 0;
+    text-align: center;
+    
+    color: #ffffff !important;
+}
+.footer-copy p{
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0;
+}
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff !important;
+}
+.link{
+    width: 30%;
+}
+
+.link-img{
+    text-align: center;
+    width: 90%;
+}
+
+.socials-2 img{
+    width: 50px;
+    margin: 10px;
+}
+
+.link h3{
+    font-size: 22px;
+    color: #fff !important;
+    margin-bottom: 15px;
+}
+
+.link a{
+    font-size: 18px;
+    display: flex;
+    color: #fff !important;
+    margin-bottom: 20px;
+}
+
+.link a:hover{
+    color: #eee04d !important;
+}
