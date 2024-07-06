@@ -4,12 +4,16 @@ from .forms import ContactForm, RegistroForm
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
+import requests
 
 # Create your views here.
 
 
 @login_required
 def agregar_producto(request, producto_id):
+    euro = requests.get('https://mindicador.cl/api').json()
+    valor = euro["euro"]["valor"]
+    print(valor)
     if request.method == 'POST':
         carro = request.session.get('carro', [])
         producto = Producto.objects.get(id=producto_id)
@@ -30,7 +34,7 @@ def agregar_producto(request, producto_id):
                     'id': producto_id,
                     'categoria': producto.nombre,
                     'precio': producto.precio,
-                    'precioEuro': producto.precioEuro,
+                    'precioEuro': producto.precio/valor,
                     'nombre': producto.nombre,
                     'src_image': producto.srcImagen,
                     'cantidad': 1,
@@ -48,17 +52,25 @@ def agregar_producto(request, producto_id):
         request.session['total_clp'] = total_clp
         request.session['total_euro'] = total_euro
 
+
+        
+        
+
         return redirect('ver_carrito')
     return redirect('ver_carrito')
 
 
 @login_required
 def ver_carrito(request): 
+    context = {}
     carro = request.session.get('carro', [])
     total_clp = request.session.get('total_clp', 0)
     total_euro = request.session.get('total_euro', 0)
 
-    return render(request, 'tienda/carrito.html', {'carro': carro, 'total_clp': total_clp, 'total_euro': total_euro})
+    context["carro"] = carro
+    context["total_clp"] = total_clp
+    context["total_euro"] = total_euro
+    return render(request, 'tienda/carrito.html', context)
 
 
 @login_required

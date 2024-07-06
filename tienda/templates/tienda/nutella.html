@@ -84,9 +84,10 @@
         <figure>
           <img src="{% static producto.srcImagen %}" class="card-img-top" alt="Producto">
         </figure>
-        <div class="card-body" style="background-color: #f79399">
+        <div class="card-body" style="background-color: #d4c53a">
           <h5 class="card-title" style="color: #fff">{{producto.nombre}}</h5>
           <p class="card-text">Precio: $ {{producto.precio}} CLP</p>
+          <p class="card-text">Precio Euro: $ {{producto.precioEuro}} EUR</p>
           
           <p class="card-text">Stock: {{producto.stock}}</p>
           {% if producto.stock > 0 %}

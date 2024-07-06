@@ -225,14 +225,11 @@ figure {
 }
 
 
-
-
-
 .card{
     border-radius: 10px;
     overflow: hidden;
     width: 390px !important; 
-    height: 500px !important;
+    height: 540px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
     text-shadow: 1px 1px #000000 !important;
 }
@@ -254,6 +251,15 @@ figure {
 .btn-primary{
     --bs-btn-border-color: #f3ebf2 !important;
     margin-left: 95px !important;
+    border-radius: 15px !important;
+    padding: 15px 10px !important;
+    cursor: pointer !important;
+    height: 50px !important;
+    margin: 10px !important;
+    width: 340px;
+    border-radius: 80px !important;
+    border: 1px solid #fff !important;
+    padding: 8px !important;
 }
 
 
@@ -287,9 +293,6 @@ figure {
     width: 340px;
     border-radius: 80px !important;
     border: 1px solid #fff !important;
-   
-   
-
 }
 
 
@@ -364,7 +367,6 @@ form{
     border: 1px solid #FFFFFF;
     outline: none;
     color: #ffffff;
-
 }
 
 .campo::placeholder{
@@ -419,11 +421,13 @@ form{
     color: #ffffff;
     margin-top: 20px;
 }
+
 .footer-copy p{
     color: #FFFFFF;
     font-size: 16px;
     margin: 0;
 }
+
 .footer-links{
     display: flex;
     flex-wrap: wrap;
@@ -440,11 +444,7 @@ form{
     gap: 10px;
     margin: 10px;
     border-radius: 25px;
-
 }
-
-
-
 
 .link1 a:hover{
     color: #eee04d !important;
@@ -525,12 +525,10 @@ form{
     }
 }
 
-
-
-
-
 .error{
 
     color: red;
 
 }
+
+
