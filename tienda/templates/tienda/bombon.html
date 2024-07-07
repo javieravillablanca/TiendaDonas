@@ -15,44 +15,46 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #ea97c3 ;">
-      <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static './images/iconopagina.png' %}" alt="Logo" width="30" height="24"
-          class="d-inline-block align-text-top">
-        Doh-Donas
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'rellenas' %}">Donas Rellenas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'glaseadas' %}">Donas Glaseadas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'bombon' %}">Donas Bombón </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'chispas' %}">Donas Chispas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'nutella' %}">Donas Nutella</a>
-          </li>
-        </ul>
-        <a class="button ms-auto" href="{% url 'inicio' %}">Cerrar Sesión</a>
-        {% if user.is_authenticated %}
-        <a class="navbar-item" href="{% url 'admin' %}">{{ user.username }}</a>
-        {% endif %}
-        <div class="content-carrito-icon">
-          <nav class="content-carro">
-            <a href="{% url 'carrito' %}">
-              <img src="{% static './images/iconocarrito.png' %}" width="50px" height="50px">
-            </a>
-          </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ea97c3;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <img src="{% static './images/iconopagina.png' %}" alt="Logo" width="30" height="24"
+            class="d-inline-block align-text-top">
+          Doh-Donas
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'rellenas' %}">Donas Rellenas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'glaseadas' %}">Donas Glaseadas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'bombon' %}">Donas Bombón</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'chispas' %}">Donas Chispas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'nutella' %}">Donas Nutella</a>
+            </li>
+          </ul>
+          <a class="button ms-auto" href="{% url 'inicio' %}">Cerrar Sesión</a>
+          {% if user.is_authenticated %}
+          <a class="navbar-item" href="{% url 'admin' %}">{{ user.username }}</a>
+          {% endif %}
+          <div class="content-carrito-icon">
+            <nav class="content-carro">
+              <a href="{% url 'carrito' %}">
+                <img src="{% static './images/iconocarrito.png' %}" width="50px" height="50px">
+              </a>
+            </nav>
+          </div>
         </div>
       </div>
     </nav>
@@ -72,12 +74,15 @@
             <p class="card-text">Precio Euro: $ {{ producto.precioEuro }} EUR</p>
             <p class="card-text">Stock: {{ producto.stock }}</p>
             {% if producto.stock > 0 %}
+            <button type="button2" style="background-color: #d4c53a !important" class="btn btn-primary3">
+              ⇧
+            </button>
             <form class="add-to-cart-form" action="{% url 'agregar_producto' producto.id %}" method="post">
               {% csrf_token %}
-              <button type="button" class="btn btn-primary4 add-to-cart-btn" data-producto-id="{{ producto.id }}">Añadir al carrito</button>
+              <button type="button" style="background-color: #d4c53a !important" class="btn btn-primary4 add-to-cart-btn" data-producto-id="{{ producto.id }}">Añadir al carrito</button>
             </form>
             {% else %}
-            <p class="btn btn-primary" style="background-color: #989898 !important">Producto sin stock</p>
+            <p class="btn btn-primary5" style="background-color: #989898 !important">Producto sin stock</p>
             {% endif %}
           </div>
         </div>
@@ -86,23 +91,25 @@
     </div>
   </div>
 
+  {% for producto in bombon %}
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Producto añadido al carrito</h5>
+          <h5 class="modal-title" id="cartModalLabel">¡ {{ producto.nombre }} añadido correctamente!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          ──────────────────•❥❥❥•───────────────────
+        <div class="modal-body" style="text-align: center !important;">
+          ─────────────•❥❥❥•───────────
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
-          <a href="{% url 'carrito' %}" class="btn btn-primary">Ver carrito</a>
+          <button type="button" style="background-color: #39aedc !important " class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+          <a href="{% url 'ver_carrito' %}" style="background-color: #39aedc !important " class="btn btn-primary">Ver carrito</a>
         </div>
       </div>
     </div>
   </div>
+  {% endfor %}
 
   <footer class="footer">
     <div class="container">
@@ -120,7 +127,7 @@
             <a href="#"><img src="{% static './images/r3.svg' %}" alt=""></a>
           </div>
           <div class="footer-copy">
-            <h5>────────────────────────────────────────•❥❥❥•───────────────────────────────────</h5>
+            <h5>─────────────•❥❥❥•───────────</h5>
           </div>
         </div>
         <div class="link">
@@ -158,7 +165,6 @@
     crossorigin="anonymous"></script>
   <script src="{% static './js/modal.js' %}"></script>
 
- 
 </body>
 
 </html>

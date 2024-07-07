@@ -3,8 +3,8 @@ from django.contrib.auth.views import LoginView
 from . import views
 
 urlpatterns = [
-    path('inicio/', views.inicio, name='inicio'),
-    path('', views.index, name='index'),
+    path('', views.inicio, name='inicio'),
+    path('index', views.index, name='index'),
     path('admin/', views.admin, name='admin'),
     path('carrito/', views.carrito, name='carrito'),
     path('rellenas/', views.rellenas, name='rellenas'),

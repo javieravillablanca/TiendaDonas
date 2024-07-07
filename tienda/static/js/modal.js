@@ -1,4 +1,4 @@
-// modal.js
+
 $(document).ready(function() {
     $('.add-to-cart-btn').click(function() {
         var productoId = $(this).data('producto-id');

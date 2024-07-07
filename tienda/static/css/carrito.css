@@ -61,8 +61,6 @@ p{
     padding: 2px;
     margin-top: 25px;
     color: #fff !important;
-    
-   
 }
    
 .button {
@@ -74,7 +72,7 @@ p{
     border: 2px solid #fff !important;
     text-decoration: none !important;
     padding: 15px !important;
-    border-radius: 25px !important; /* Hace las puntas redondeadas */
+    border-radius: 25px !important; 
     cursor: pointer !important;
     transition: background-color 0.3s ease ;
     
@@ -82,8 +80,9 @@ p{
    
 }
 .button:hover {
-    background-color: #ea97c3 !important; /* Cambia el color en el hover */
+    background-color: #ea97c3 !important; 
 }
+
 .product {
     display: flex;
     flex-wrap: wrap; 
@@ -157,6 +156,7 @@ p{
     border: none !important;
     font-size: 1.5rem !important; 
 }
+
 
 .limpiar-carrito{
     background-color: #ff0000 !important;
@@ -373,37 +373,6 @@ a{
     margin-top: 35px;
 }
 
-@media (max-width: 768px) {  
-    .carousel-inner {
-        width: 70%;  
-        height: 70vw; 
-        margin: 0 auto; 
-        overflow: hidden; 
-    }
-
-    .carousel-inner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-    }
-}
-
-@media (min-width: 992px) {  
-    .carousel-inner {
-        width: 30%;  
-        height: 40vw; 
-        margin: 0 auto; 
-        padding: 20px;
-        overflow: hidden; 
-    }
-
-    .carousel-inner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-    }
-}
-
 table {
     border-collapse: collapse;
     background-color: #ddda3e;
@@ -413,7 +382,7 @@ table {
 }
 
 th, td {
-    border: 1px solid #000 !important; 
+    border: 1px solid #fff !important; 
     text-align: center;
     padding: 5px;
 }
@@ -426,8 +395,8 @@ th, td {
 }
 
 th{
-    background-color: #fff !important;
-    color: #000 ;
+    background-color: #e9c40a !important;
+    color: #fff ;
 }
 
 td img{
@@ -435,29 +404,22 @@ td img{
     height: 50px;
 }
 
-.modal2{
-    height: 20vh;
-    background: #c0c031;
-    position: fixed;
-    top: 10vh;
-    left: 35vw;
-    width: 30vw;
-    z-index: 1000;
-    display: flex;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0px 0px 20px #000000;
-    animation-name: bajar;
-    animation-duration: .5s;
+
+
+@media (max-width: 768px) {
+    
+    .h1, h1 {
+        font-size: 40px;
+    }
+    
 }
 
-@keyframes bajar {
-    0%{
-        transform: translateY(-30vh);
+
+@media (min-width: 768px) {
+    
+    .h1, h1 {
+        font-size: 50px;
     }
-    100%{
-        transform: translateY(0vh);
-    }
+    
 }
+

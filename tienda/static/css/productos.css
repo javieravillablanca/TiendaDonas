@@ -193,10 +193,7 @@ p{
     background-color: #c4bb43 !important;
 }
 
-.modal-title {
-    background-color:#d9d26e !important ;
-    border-bottom: 1px solid #e0d64c;
-}
+
 
 .btn{
     --bs-btn-hover-border-color: #fff !important
@@ -249,9 +246,11 @@ figure {
 
 
 .btn-primary{
-    --bs-btn-border-color: #f3ebf2 !important;
-    margin-left: 95px !important;
-    border-radius: 15px !important;
+    border: 1px solid #fff !important;
+}
+
+.btn-primary5{
+    
     padding: 15px 10px !important;
     cursor: pointer !important;
     height: 50px !important;
@@ -259,7 +258,10 @@ figure {
     width: 340px;
     border-radius: 80px !important;
     border: 1px solid #fff !important;
-    padding: 8px !important;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center; 
+    line-height: 1.2; 
 }
 
 
@@ -270,6 +272,9 @@ figure {
 .btn-secondary{
     --bs-btn-border-color: #f3ebf2 !important;
 }
+
+
+
 
 .card:hover{
     
@@ -532,3 +537,19 @@ form{
 }
 
 
+@media (max-width: 768px) {
+    
+    .h1, h1 {
+        font-size: 40px;
+    }
+    
+}
+
+
+@media (min-width: 768px) {
+    
+    .h1, h1 {
+        font-size: 50px;
+    }
+    
+}
