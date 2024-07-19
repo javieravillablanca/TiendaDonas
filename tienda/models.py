@@ -17,7 +17,6 @@ class Producto(models.Model):
     id = models.IntegerField(primary_key=True)
     stock = models.IntegerField(default=1)
     nombre =models.CharField(max_length=50)
-    descripcion = models.TextField(max_length=200,default="Descripcion")
     precio=models.IntegerField(null=True)
     precioEuro=models.FloatField(default="0.0")
     Categoria=models.ForeignKey(Categoria,on_delete=models.CASCADE)
